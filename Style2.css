@@ -1,0 +1,145 @@
+p {
+    font-family: arial, sans-serif;
+    font-size: 2em ;
+    font-style: italic;
+}
+
+h1 {
+  font-family: "Quicksand", sans-serif;
+  font-size: 3em;
+  text-align: center;
+  /*a partir de là, c'est pour la banière*/
+  color:aliceblue;
+  padding: 8cqi;
+  background-image: url("image/tcg2.jpg");
+  background-size: cover;
+  background-position: bottom;
+  opacity: 0.5;
+  /*stop*/
+}
+
+h2 {
+  background: linear-gradient(to right, #22c1c3, #fdbb2d); /*dégradé de couleur*/
+}
+
+.ma-class-2{
+    font-weight: 700;
+    text-decoration: underline;
+    color: rgba(93, 45, 97, 0.8) /*Le A pour opacité, entre 0 et 1*/
+
+}
+
+body {
+  background-color:antiquewhite ; /*couleur de fond*/
+}
+
+h4 {
+  border: 2px dotted #22c1c3;
+  border-radius: 10px 90px 0.2px 40px; /*pour arrondir les angles*/
+  box-shadow: 6px 6px 15px rgba(93, 45, 97, 0.8); /*ombre*/
+}
+
+img:hover {
+  opacity: 0.5; /*au survol, change l'opacité*/
+}
+
+a {
+  font-size: 2em;
+  text-decoration: none;
+  color:black;
+}
+
+a:hover { /*au survol, les liens hypertexte change de couleur ou de style. A mais ça peut être P ou CLASS*/ 
+  color: #fdbb2d;
+  text-decoration: underline;
+}
+
+a:active{ /*au clic, le lien hypertexte change*/
+text-decoration-color:#22c1c3 ;
+}
+
+a:focus{ /*à la selection, le lien hypertexte change*/
+  background-color: aqua;
+  color:blue;
+  outline-color:rgba(93, 45, 97, 0.8);
+}
+
+img:hover + h4{ /*au survol d'une image, le text h4 change de couleur*/
+  color:deeppink;
+}
+
+a:visited{ /*lien déjà visité*/
+  color:black
+}
+
+.conteneur{
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr; /*pour le nombre de colonnes, et la largeur de chacune d'entre elles. // au lieu de px on peut remplacer par fr*/
+  grid-template-rows: 100px 100px 100px 100px 100px; /*pour le nombre de rangées, et la hauteur de chacune d'entre elles.*/
+  gap: 20px; /*aérer, donner de l'espace entre chaque box*/
+}
+
+.box {
+  border: 2px solid black;
+}
+
+.une {
+  grid-column: 1 / 4; /*je veux que ma box fasse 1 largeur sur 3 colonne +1 car elle va à la fin d'un élémentt */
+  grid-row:1 / 2;
+}
+.deux {
+  grid-row: 2 / 4; /*qui s'étale sur 2 rangées en hauteur et finit sur la rangée 4 / l'élément .une occupe déjà la 1ere rangée*/
+}
+
+td, th {
+  border: 1px solid black;
+  padding: 15px;
+}
+
+table{ 
+  border-collapse: collapse; /*pour fusionner les bordures du tableau*/
+  margin: auto;
+}
+
+form{
+  display: flex;
+  flex-direction: column;
+  margin: auto;
+  width: 50%;
+}
+input{
+  padding: 10px;
+  border: 1px solid black;
+}
+
+textarea{
+  width: 800px;
+  height: 200px;
+  border-radius: 10px;
+}
+
+fieldset{
+  background-color: pink;
+}
+
+/*POUR RENDRE MON SITE RESPONSIVE*/
+@media screen and (max-width: 1200px){/*A partir de combien de px je change d'affichage*/
+  p {
+    color:deeppink;
+  }
+}
+
+@media screen and (max-width: 950px){
+  .conteneur{
+    flex-direction: column;
+  }
+
+  img{
+    display: none;
+  }
+
+  p{
+    overflow: scroll; /*permet de contenir du contenu dans un conteneur en scrollant*/
+  }
+
+}

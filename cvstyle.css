@@ -1,0 +1,38 @@
+body {
+    background-color:antiquewhite ; /*couleur de fond*/
+}
+
+h1 {
+    color:aliceblue;
+    padding: 100px;
+    background-image: url("image/banner.jpg");
+    background-size: cover;
+    background-position: top;
+    opacity: 0.8;
+    width: 50%; /*possibilité de mettre en % ou px*/
+    height: 20px;
+    margin: auto;
+}
+
+.lorem {
+    margin: 50px;
+    background-color: rgba(93, 45, 97, 0.2);
+    padding: 10px;
+    margin: 10px;
+    margin-left: 100px;
+    margin-right: 100px; /*SImplifiable par // margin: 10px 100 0px 100px // dans le sens d'une aiguille d'une montre*/
+    border: 2px solid rgba(93, 45, 97, 0.5);
+    text-align: justify;
+}
+
+section{
+    padding: 80px;
+}
+
+.conteneur{
+    display: flex;
+    flex-direction: row; /*axe horizontal*/
+    justify-content: space-around ; /*répartissement des blocs*/
+    flex-wrap: wrap; /*retour à la ligne automatique selon taille de l'écran*/
+    /*possibilité de modifier chaque box différemment en nommant bien chaque box différemment*/
+}
